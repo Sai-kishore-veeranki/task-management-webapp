@@ -34,6 +34,7 @@ public class TaskController {
                 .orElseThrow(() -> new RuntimeException("Task not found with id " + id));
     }
 
+
     @PutMapping("/{id}")
     public TaskEntity updateTask(@PathVariable Long id, @RequestBody TaskEntity task) {
         return taskService.updateTask(id, task);
